@@ -1,0 +1,82 @@
+/* ==========================================================================
+   KONTAKT & FOOTER
+   ========================================================================== */
+
+.contact {
+  text-align: center;
+  padding-bottom: var(--sp-9);
+}
+
+.contact__title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.contact__lede {
+  margin: var(--sp-5) auto 0;
+  max-width: 52ch;
+  color: var(--c-text-dim);
+}
+
+.contact__links {
+  margin-top: var(--sp-8);
+  display: flex;
+  justify-content: center;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-5);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.social-link:hover {
+  color: var(--c-text);
+  border-color: var(--c-cyan);
+  box-shadow: var(--shadow-cyan);
+  transform: translateY(-2px);
+}
+
+.social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer {
+  position: relative;
+  z-index: var(--z-content);
+  padding: var(--sp-6) var(--sp-5);
+  border-top: 1px solid var(--c-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--c-text-faint);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer__status {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.footer__status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--c-signal);
+  box-shadow: 0 0 8px var(--c-signal);
+}

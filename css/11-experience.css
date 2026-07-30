@@ -1,0 +1,63 @@
+/* ==========================================================================
+   ERFARENHET
+   ========================================================================== */
+
+.experience-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--sp-6);
+}
+
+.experience-card__top {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-4);
+}
+
+.experience-card__role {
+  font-size: 1.3rem;
+}
+
+.experience-card__company {
+  color: var(--c-cyan);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  margin-top: var(--sp-1);
+}
+
+.experience-card__duration {
+  margin-top: var(--sp-1);
+  color: var(--c-text-faint);
+  font-size: 0.82rem;
+}
+
+.experience-card__description {
+  margin-top: var(--sp-4);
+  color: var(--c-text-dim);
+  line-height: 1.6;
+  max-width: 60ch;
+}
+
+.experience-card__clients {
+  margin-top: var(--sp-5);
+}
+
+.experience-card__clients-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-faint);
+  margin-bottom: var(--sp-3);
+}
+
+.experience-card__client-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+@media (max-width: 640px) {
+  .experience-card {
+    grid-template-columns: 1fr;
+  }
+}

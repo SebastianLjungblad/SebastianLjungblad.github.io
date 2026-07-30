@@ -1,0 +1,124 @@
+/* ==========================================================================
+   KOMPETENSER
+   ========================================================================== */
+
+.skills__tabs {
+  display: flex;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+  flex-wrap: wrap;
+}
+
+.skills__tab {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: var(--sp-2) var(--sp-5);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-dim);
+  transition: all var(--dur-fast) var(--ease-out);
+}
+
+.skills__tab.is-active,
+.skills__tab:hover {
+  color: var(--c-void);
+  background: var(--c-cyan);
+  border-color: var(--c-cyan);
+}
+
+.skills__panel {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp-5) var(--sp-8);
+}
+
+.skills__panel.is-active {
+  display: grid;
+}
+
+.skills__note {
+  margin-top: var(--sp-7);
+  padding: var(--sp-5);
+  border-left: 2px solid var(--c-amber);
+  background: rgba(255, 157, 77, 0.05);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: var(--c-text-dim);
+  font-size: 0.92rem;
+}
+
+/* --- Kurser --------------------------------------------------------------- */
+.courses {
+  margin-top: var(--sp-9);
+}
+
+.courses__meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-5);
+  font-family: var(--font-mono);
+  color: var(--c-text-dim);
+  font-size: 0.85rem;
+}
+
+.courses__meta strong {
+  color: var(--c-cyan);
+  font-size: 1.4rem;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.course-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-text-faint);
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--c-border-strong);
+}
+
+.course-table td {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--c-border);
+  color: var(--c-text-dim);
+}
+
+.course-table tr:hover td {
+  background: rgba(34, 229, 255, 0.03);
+  color: var(--c-text);
+}
+
+.course-table a {
+  color: var(--c-text);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.course-table a:hover {
+  color: var(--c-cyan);
+}
+
+.course-table__code {
+  font-family: var(--font-mono);
+  color: var(--c-cyan);
+  font-size: 0.82rem;
+}
+
+@media (max-width: 720px) {
+  .skills__panel {
+    grid-template-columns: 1fr;
+  }
+
+  .course-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

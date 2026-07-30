@@ -1,0 +1,46 @@
+/* ==========================================================================
+   RESPONSIVA JUSTERINGAR (övergripande)
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --sp-10: 5rem;
+    --sp-9: 4rem;
+  }
+
+  .section {
+    padding: var(--sp-9) var(--sp-4);
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .course-table {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    justify-content: center;
+    width: 100%;
+  }
+}

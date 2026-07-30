@@ -1,0 +1,80 @@
+/* ==========================================================================
+   DESIGN TOKENS
+   Ändra färger, typsnitt och avstånd här — allt annat i CSS-filerna refererar
+   till dessa variabler, så en ändring här slår igenom överallt.
+   ========================================================================== */
+
+:root {
+  /* --- Rymd / bas --------------------------------------------------- */
+  --c-void: #05060a;
+  --c-bg: #070912;
+  --c-bg-elevated: #0d1120;
+  --c-bg-elevated-2: #131a2e;
+  --c-border: rgba(120, 170, 255, 0.14);
+  --c-border-strong: rgba(120, 170, 255, 0.28);
+
+  /* --- Tech-accent (cyan / signal) ----------------------------------- */
+  --c-cyan: #22e5ff;
+  --c-cyan-dim: #0f9fb8;
+  --c-cyan-glow: rgba(34, 229, 255, 0.35);
+  --c-signal: #3dffb0;
+
+  /* --- Äventyr-accent (gryning / bergssol) --------------------------- */
+  --c-amber: #ff9d4d;
+  --c-amber-2: #ffc14d;
+  --c-ember: #ff6b4d;
+  --c-amber-glow: rgba(255, 157, 77, 0.35);
+
+  /* --- Text ----------------------------------------------------------- */
+  --c-text: #eaf0ff;
+  --c-text-dim: #9aa8c7;
+  --c-text-faint: #5c6885;
+
+  /* --- Statusfärger ---------------------------------------------------- */
+  --c-success: #3dffb0;
+  --c-warn: #ffc14d;
+
+  /* --- Typsnitt ---------------------------------------------------------- */
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  /* --- Spacing-skala (baserad på 4px) ------------------------------------ */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+
+  /* --- Radier & skuggor ---------------------------------------------------- */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  --shadow-cyan: 0 0 24px var(--c-cyan-glow);
+  --shadow-amber: 0 0 24px var(--c-amber-glow);
+  --shadow-panel: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
+
+  /* --- Layout --------------------------------------------------------- */
+  --max-width: 1240px;
+  --nav-height: 76px;
+
+  /* --- Övergångar ------------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 180ms;
+  --dur-medium: 420ms;
+  --dur-slow: 900ms;
+
+  /* --- Z-index-skala ---------------------------------------------------- */
+  --z-bg: 0;
+  --z-content: 10;
+  --z-nav: 100;
+  --z-cursor: 9999;
+}

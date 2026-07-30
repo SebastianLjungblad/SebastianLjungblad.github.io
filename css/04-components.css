@@ -1,0 +1,262 @@
+/* ==========================================================================
+   ÅTERANVÄNDBARA KOMPONENTER
+   ========================================================================== */
+
+/* --- Knappar ------------------------------------------------------------ */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-6);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--c-border-strong);
+  color: var(--c-text);
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  border-color: var(--c-cyan);
+  box-shadow: var(--shadow-cyan);
+  transform: translateY(-2px);
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--c-cyan) 0%, var(--c-cyan-dim) 100%);
+  color: var(--c-void);
+  border-color: transparent;
+  font-weight: 600;
+}
+
+.btn--primary:hover {
+  box-shadow: 0 0 32px var(--c-cyan-glow);
+}
+
+.btn--amber {
+  border-color: rgba(255, 157, 77, 0.4);
+}
+
+.btn--amber:hover {
+  border-color: var(--c-amber);
+  box-shadow: var(--shadow-amber);
+}
+
+.btn--ghost {
+  border-color: transparent;
+  background: transparent;
+}
+
+/* --- Kort ----------------------------------------------------------------- */
+.card {
+  position: relative;
+  background: linear-gradient(180deg, var(--c-bg-elevated) 0%, var(--c-bg) 100%);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  box-shadow: var(--shadow-panel);
+  transition: border-color var(--dur-medium) var(--ease-out), transform var(--dur-medium) var(--ease-out);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--c-cyan-glow), transparent 40%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity var(--dur-medium) var(--ease-out);
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--c-border-strong);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* --- Platshållare för bilder --------------------------------------------- */
+.img-placeholder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  min-height: 220px;
+  border: 1.5px dashed var(--c-border-strong);
+  border-radius: var(--radius-md);
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(34, 229, 255, 0.03),
+    rgba(34, 229, 255, 0.03) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  color: var(--c-text-faint);
+  text-align: center;
+  padding: var(--sp-5);
+}
+
+.img-placeholder__icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+}
+
+.img-placeholder__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  max-width: 32ch;
+}
+
+/* --- Badges / taggar -------------------------------------------------------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--sp-1) var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--c-border);
+  color: var(--c-text-dim);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.tag--status {
+  color: var(--c-signal);
+  border-color: rgba(61, 255, 176, 0.35);
+}
+
+.tag--status.tag--pending {
+  color: var(--c-warn);
+  border-color: rgba(255, 193, 77, 0.35);
+}
+
+.tag--status.tag--registered {
+  color: var(--c-cyan);
+  border-color: rgba(34, 229, 255, 0.35);
+}
+
+/* --- Progressbar (kompetens) --------------------------------------------- */
+.skill-bar {
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.skill-bar__labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+}
+
+.skill-bar__track {
+  height: 6px;
+  border-radius: var(--radius-full);
+  background: var(--c-bg-elevated-2);
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  width: 0%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--c-cyan-dim), var(--c-cyan));
+  box-shadow: 0 0 12px var(--c-cyan-glow);
+  transition: width 1.1s var(--ease-out);
+}
+
+/* --- HUD statisticreadout ------------------------------------------------- */
+.stat-readout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  background: rgba(13, 17, 32, 0.6);
+  backdrop-filter: blur(6px);
+}
+
+.stat-readout__value {
+  font-family: var(--font-mono);
+  font-size: 1.9rem;
+  color: var(--c-cyan);
+  text-shadow: 0 0 18px var(--c-cyan-glow);
+}
+
+.stat-readout__label {
+  font-size: 0.78rem;
+  color: var(--c-text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* --- Vertikal tidslinje --------------------------------------------------- */
+.timeline {
+  position: relative;
+  padding-left: var(--sp-6);
+  border-left: 1px solid var(--c-border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-bottom: var(--sp-7);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__dot {
+  position: absolute;
+  left: calc(var(--sp-6) * -1 - 5px);
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--c-cyan);
+  box-shadow: 0 0 12px var(--c-cyan-glow);
+}
+
+/* --- Ikon-cirkel ------------------------------------------------------------ */
+.icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--c-border-strong);
+  background: radial-gradient(circle at 30% 30%, rgba(34, 229, 255, 0.15), transparent 70%);
+  color: var(--c-cyan);
+  flex-shrink: 0;
+}
+
+.icon-badge svg {
+  width: 20px;
+  height: 20px;
+}
+
+.icon-badge--amber {
+  color: var(--c-amber);
+  border-color: rgba(255, 157, 77, 0.4);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 157, 77, 0.18), transparent 70%);
+}

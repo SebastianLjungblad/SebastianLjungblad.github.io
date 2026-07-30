@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebastian Ljungblad — Mjukvaruingenjör &amp; äventyrare</title>
+  <meta name="description" content="Sebastian Ljungblad — civilingenjörsstudent i mjukvaruteknik på Linköpings universitet. Bygger fullstack-system, tävlar som Ironman-atlet och bestiger berg. Söker praktik hos ett rymd- eller satellitbolag." />
+  <meta name="theme-color" content="#05060a" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Sebastian Ljungblad — Mjukvaruingenjör &amp; äventyrare" />
+  <meta property="og:description" content="Digitalt CV: projekt, kompetenser, äventyr och mål — från kod till 4000-metare." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2305060a'/%3E%3Cpath d='M12 3c2.5 2 4 5.5 4 9.5 0 2-1 4-1 4H9s-1-2-1-4C8 8.5 9.5 5 12 3Z' fill='none' stroke='%2322e5ff' stroke-width='1.6'/%3E%3Ccircle cx='12' cy='10' r='1.4' fill='%2322e5ff'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/00-variables.css" />
+  <link rel="stylesheet" href="css/01-reset.css" />
+  <link rel="stylesheet" href="css/02-base.css" />
+  <link rel="stylesheet" href="css/03-layout.css" />
+  <link rel="stylesheet" href="css/04-components.css" />
+  <link rel="stylesheet" href="css/05-nav.css" />
+  <link rel="stylesheet" href="css/06-hero.css" />
+  <link rel="stylesheet" href="css/07-about.css" />
+  <link rel="stylesheet" href="css/08-projects.css" />
+  <link rel="stylesheet" href="css/09-skills.css" />
+  <link rel="stylesheet" href="css/10-adventures.css" />
+  <link rel="stylesheet" href="css/11-experience.css" />
+  <link rel="stylesheet" href="css/12-goals.css" />
+  <link rel="stylesheet" href="css/13-contact.css" />
+  <link rel="stylesheet" href="css/14-animations.css" />
+  <link rel="stylesheet" href="css/15-responsive.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Hoppa till innehåll</a>
+
+  <!-- Laddningsskärm -->
+  <div class="loader" id="loader">
+    <span class="text-mono" style="color:var(--c-cyan);font-size:1.4rem;letter-spacing:.1em;">SL_</span>
+    <div class="loader__bar"><div class="loader__bar-fill"></div></div>
+    <span class="loader__label">Initierar system…</span>
+  </div>
+
+  <!-- Bakgrundslager -->
+  <canvas id="starfield-canvas" aria-hidden="true"></canvas>
+  <div class="contour-overlay" id="contour-overlay" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="site-nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#hero" data-cursor-hover>
+        <span class="nav__brand-dot"></span>
+        SEBASTIAN.LJUNGBLAD
+      </a>
+      <button class="nav__toggle" id="nav-toggle" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav__links" id="nav-links">
+        <a class="nav__link" href="#about">Om mig</a>
+        <a class="nav__link" href="#projects">Projekt</a>
+        <a class="nav__link" href="#skills">Kompetenser</a>
+        <a class="nav__link" href="#adventures">Äventyr</a>
+        <a class="nav__link" href="#experience">Erfarenhet</a>
+        <a class="nav__link" href="#goals">Mål</a>
+        <a class="nav__link" href="#contact">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ================================================================ HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <span class="eyebrow hero__eyebrow">SYSTEM ONLINE // MJUKVARUINGENJÖR &amp; ÄVENTYRARE</span>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line">Sebastian</span>
+        <span class="hero__title-line accent">Ljungblad</span>
+      </h1>
+
+      <p class="hero__tagline">
+        <span id="hero-typewriter" class="hero__typewriter"></span>
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#projects" data-cursor-hover>Se mina projekt</a>
+        <a class="btn btn--amber" href="#adventures" data-cursor-hover>Utforska äventyren</a>
+        <a class="btn" href="#contact" data-cursor-hover>Kontakta mig</a>
+      </div>
+
+      <div class="hero__stats" id="hero-stats"></div>
+
+      <a href="#about" class="hero__scroll-cue" data-cursor-hover>
+        <span>Scrolla</span>
+        <span class="hero__scroll-cue-line"></span>
+      </a>
+
+      <!-- Handritad bergssiluett i horisonten -->
+      <svg class="hero__mountains" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="mtn-glow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ff9d4d" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#ff9d4d" stop-opacity="0" />
+          </linearGradient>
+          <linearGradient id="mtn-back" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#132038" />
+            <stop offset="100%" stop-color="#0a0e1a" />
+          </linearGradient>
+          <linearGradient id="mtn-mid" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#0d1424" />
+            <stop offset="100%" stop-color="#070912" />
+          </linearGradient>
+          <linearGradient id="mtn-front" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#080a14" />
+            <stop offset="100%" stop-color="#05060a" />
+          </linearGradient>
+        </defs>
+
+        <circle cx="720" cy="300" r="160" fill="url(#mtn-glow)" />
+
+        <polygon fill="url(#mtn-back)" points="0,420 0,280 90,210 190,260 300,150 420,240 540,120 660,220 760,160 860,250 980,140 1100,230 1220,170 1330,250 1440,190 1440,420" />
+        <polygon fill="url(#mtn-mid)" points="0,420 0,330 120,270 260,320 380,220 520,300 650,200 780,290 900,230 1040,310 1160,240 1290,310 1440,260 1440,420" />
+        <polygon fill="url(#mtn-front)" points="0,420 0,370 140,330 300,380 460,300 620,370 780,300 940,380 1100,320 1260,380 1440,340 1440,420" />
+      </svg>
+    </section>
+
+    <!-- ================================================================ OM MIG -->
+    <section class="section" id="about">
+      <div class="section__inner">
+        <div class="section__header" data-reveal="fade">
+          <span class="eyebrow">01 // Om mig</span>
+          <h2 class="section__title">Kod i vardagen. Höjder i helgerna.</h2>
+        </div>
+
+        <div class="about__layout">
+          <div class="about__portrait" id="about-portrait" data-reveal="left"></div>
+
+          <div>
+            <div class="about__text" id="about-bio" data-reveal-stagger></div>
+
+            <div class="about__roles" id="about-roles" data-reveal-stagger></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ PROJEKT -->
+    <section class="section" id="projects">
+      <div class="section__inner">
+        <div class="section__header" data-reveal="fade">
+          <span class="eyebrow">02 // Projekt</span>
+          <h2 class="section__title">Byggt från grunden, driftsatt i verkligheten</h2>
+          <p class="section__lede">Inga kursuppgifter — riktiga system med riktiga användare, riktiga pengar och riktig drift.</p>
+        </div>
+
+        <div id="projects-list"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================ KOMPETENSER -->
+    <section class="section" id="skills">
+      <div class="section__inner">
+        <div class="section__header" data-reveal="fade">
+          <span class="eyebrow">03 // Kompetenser</span>
+          <h2 class="section__title">Verktygslådan</h2>
+          <p class="section__lede">Språk, ramverk och kurser som ligger till grund för allt jag bygger.</p>
+        </div>
+
+        <div class="skills__tabs" id="skills-tabs"></div>
+        <div class="skills__panels" id="skills-panels"></div>
+        <p class="skills__note" id="skills-note"></p>
+
+        <div class="courses" data-reveal="fade">
+          <div class="section__header" style="margin-bottom: var(--sp-5);">
+            <span class="eyebrow">03.1 // Kurser, LiU</span>
+            <h3 class="section__title" style="font-size: clamp(1.5rem, 3vw, 2rem);">Civilingenjör Mjukvaruteknik</h3>
+          </div>
+          <div class="courses__meta" id="courses-meta"></div>
+          <div style="overflow-x:auto;">
+            <table class="course-table">
+              <thead>
+                <tr>
+                  <th>Kurs</th>
+                  <th>Kod</th>
+                  <th>Poäng</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="courses-table-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ ÄVENTYR -->
+    <section class="section" id="adventures">
+      <div class="section__inner">
+        <div class="section__header" data-reveal="fade">
+          <span class="eyebrow">04 // Äventyr</span>
+          <h2 class="section__title">Samma envishet, andra höjdmeter</h2>
+          <p class="section__lede">Tre Ironman-lopp och en bestigning mot 4000 meter — här är statistiken, rutterna och tankarna bakom.</p>
+        </div>
+
+        <h3 class="text-mono" style="color:var(--c-cyan);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:var(--sp-5);">Triathlon</h3>
+        <div class="adventure-grid" id="races-grid" data-reveal-stagger></div>
+
+        <h3 class="text-mono" style="color:var(--c-amber);font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:var(--sp-5);">Bergsbestigning</h3>
+        <div id="climb-container"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================ ERFARENHET -->
+    <section class="section" id="experience">
+      <div class="section__inner">
+        <div class="section__header" data-reveal="fade">
+          <span class="eyebrow">05 // Erfarenhet</span>
+          <h2 class="section__title">Arbetsliv</h2>
+        </div>
+
+        <div id="experience-list"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================ MÅL -->
+    <section class="section" id="goals">
+      <div class="section__inner">
+        <div class="section__header" data-reveal="fade">
+          <span class="eyebrow">06 // Mål</span>
+          <h2 class="section__title">Uppnått &amp; nästa horisont</h2>
+          <p class="section__lede">Jag mäter framsteg i toppar bestigna, mil sprungna och system driftsatta — och siktet är alltid inställt på nästa.</p>
+        </div>
+
+        <div class="goals__layout">
+          <div>
+            <div class="goals__col-title goals__col-title--achieved">
+              <span>✓</span> Uppnått
+            </div>
+            <div id="goals-achieved" data-reveal-stagger></div>
+          </div>
+          <div>
+            <div class="goals__col-title goals__col-title--future">
+              <span>→</span> Nästa mål
+            </div>
+            <div id="goals-future" data-reveal-stagger></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================ KONTAKT -->
+    <section class="section contact" id="contact">
+      <div class="section__inner">
+        <span class="eyebrow" style="justify-content:center;">07 // Kontakt</span>
+        <h2 class="contact__title" data-reveal="scale">Redo för nästa uppdrag.</h2>
+        <p class="contact__lede" data-reveal="fade">
+          Söker praktik eller examensarbete hos ett rymd- eller satellitbolag inför min sista termin på civilingenjörsprogrammet. Hör gärna av dig.
+        </p>
+        <div class="contact__links" id="social-links" data-reveal-stagger></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>&copy; <span id="current-year"></span> Sebastian Ljungblad</span>
+    <span class="footer__status">
+      <span class="footer__status-dot"></span>
+      Byggd med vanilla HTML, CSS &amp; JavaScript
+    </span>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

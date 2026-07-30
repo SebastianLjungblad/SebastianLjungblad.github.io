@@ -1,0 +1,238 @@
+/* ==========================================================================
+   ÄVENTYR
+   ========================================================================== */
+
+.adventures__subnav {
+  display: flex;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-7);
+}
+
+.adventure-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-5);
+  margin-bottom: var(--sp-9);
+}
+
+.race-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.race-card__media {
+  margin-bottom: var(--sp-5);
+}
+
+.race-card__media .img-placeholder {
+  min-height: 160px;
+}
+
+.race-card__location {
+  color: var(--c-amber);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+
+.race-card__title {
+  font-size: 1.4rem;
+  margin-top: var(--sp-2);
+}
+
+.race-card__subtitle {
+  color: var(--c-text-dim);
+  font-size: 0.9rem;
+  margin-top: var(--sp-1);
+}
+
+.race-card__distances {
+  display: flex;
+  gap: var(--sp-4);
+  margin-top: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--c-border);
+}
+
+.race-card__distance {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.race-card__distance-value {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--c-cyan);
+}
+
+.race-card__distance-label {
+  font-size: 0.68rem;
+  color: var(--c-text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.race-card__elevation {
+  margin-top: var(--sp-4);
+}
+
+.race-card__stats {
+  margin-top: var(--sp-4);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2) var(--sp-4);
+  font-size: 0.85rem;
+}
+
+.race-card__stat-label {
+  color: var(--c-text-faint);
+}
+
+.race-card__stat-value {
+  color: var(--c-text);
+  font-family: var(--font-mono);
+}
+
+.race-card__thoughts {
+  margin-top: var(--sp-4);
+  padding: var(--sp-4);
+  border-left: 2px solid var(--c-cyan);
+  background: rgba(34, 229, 255, 0.04);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--c-text-dim);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.elevation-profile {
+  width: 100%;
+  height: 60px;
+  display: block;
+}
+
+.elevation-profile path.fill {
+  fill: url(#elevation-gradient);
+  opacity: 0.5;
+}
+
+.elevation-profile path.line {
+  fill: none;
+  stroke: var(--c-cyan);
+  stroke-width: 1.5;
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: stroke-dashoffset 1.4s var(--ease-out);
+}
+
+.elevation-profile.is-visible path.line {
+  stroke-dashoffset: 0;
+}
+
+/* --- Bestigning ------------------------------------------------------------- */
+.climb-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-8);
+}
+
+.climb-card__media .img-placeholder {
+  min-height: 380px;
+}
+
+.climb-card__title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.climb-card__subtitle {
+  color: var(--c-amber);
+  margin-top: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.climb-facts {
+  margin-top: var(--sp-5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3) var(--sp-5);
+}
+
+.climb-fact dt {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--c-text-faint);
+}
+
+.climb-fact dd {
+  font-size: 0.88rem;
+  color: var(--c-text);
+  margin-top: 2px;
+}
+
+.climb-card__intro {
+  margin-top: var(--sp-5);
+  color: var(--c-text-dim);
+  line-height: 1.65;
+}
+
+.itinerary {
+  margin-top: var(--sp-6);
+}
+
+.gear-list {
+  margin-top: var(--sp-6);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-2) var(--sp-4);
+}
+
+.gear-list__item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+}
+
+.gear-list__item::before {
+  content: "▲";
+  color: var(--c-amber);
+  font-size: 0.6rem;
+}
+
+.climb-card__safety {
+  margin-top: var(--sp-6);
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px solid rgba(255, 157, 77, 0.35);
+  border-radius: var(--radius-md);
+  background: rgba(255, 157, 77, 0.05);
+  font-size: 0.85rem;
+  color: var(--c-text-dim);
+}
+
+.climb-card__thoughts {
+  margin-top: var(--sp-6);
+  padding: var(--sp-5);
+  border-left: 2px solid var(--c-amber);
+  background: rgba(255, 157, 77, 0.04);
+  font-style: italic;
+  color: var(--c-text-dim);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+@media (max-width: 960px) {
+  .adventure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .climb-card {
+    grid-template-columns: 1fr;
+  }
+
+  .climb-facts,
+  .gear-list {
+    grid-template-columns: 1fr;
+  }
+}
