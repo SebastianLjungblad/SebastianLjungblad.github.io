@@ -90,10 +90,14 @@ export function renderClimb(containerId = "climb-container") {
             <div class="climb-fact"><dt>Normalled</dt><dd>${climb.facts.normalRoute}</dd></div>
             <div class="climb-fact"><dt>Svårighetsgrad</dt><dd>${climb.facts.difficulty}</dd></div>
             <div class="climb-fact"><dt>Bergstuga</dt><dd>${climb.facts.baseHut}</dd></div>
+            ${climb.facts.season ? `<div class="climb-fact"><dt>Säsong</dt><dd>${climb.facts.season}</dd></div>` : ""}
+            ${climb.facts.groupSize ? `<div class="climb-fact"><dt>Gruppstorlek</dt><dd>${climb.facts.groupSize}</dd></div>` : ""}
             <div class="climb-fact"><dt>Datum</dt><dd>${climb.date}</dd></div>
           </dl>
 
-          <p class="climb-card__intro">${climb.logistics.intro}</p>
+          ${(Array.isArray(climb.logistics.intro) ? climb.logistics.intro : [climb.logistics.intro])
+            .map((paragraph) => `<p class="climb-card__intro">${paragraph}</p>`)
+            .join("")}
 
           <div class="itinerary timeline">
             ${climb.logistics.itinerary

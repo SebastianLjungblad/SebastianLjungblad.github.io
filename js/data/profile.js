@@ -26,7 +26,7 @@ export const profile = {
   bio: [
     "Jag heter Sebastian Ljungblad, är 21 år och läser till civilingenjör i mjukvaruteknik på Linköpings universitet — just nu i mitt tredje år. Vid sidan av studierna jobbar jag som redovisningskonsult på Contrado AB, tävlar som Ironman-atlet, bestiger berg och kör motorcykel.",
     "Jag drivs av samma sak i koden som på berget och i tävlingsbanan: att förstå systemet i grunden, göra medvetna avvägningar och aldrig nöja mig med \"det funkar hos mig\". Det märks i hur jag byggt Finns i Havet — en fullstack e-handelsplattform jag utvecklat helt själv, från lagersystem till betalningslösning.",
-    "Rymden är min största passion och anledningen till att den här sidan finns. Målet är att kombinera min bakgrund inom mjukvaruteknik med mitt intresse för rymdfart och landa en praktikplats hos ett rymd- eller satellitbolag under min sista termin på civilingenjörsprogrammet.",
+    "Rymden är en av mina största passioner och anledningen till att den här sidan finns. Målet är att kombinera min bakgrund inom mjukvaruteknik med mitt intresse för rymdfart och landa en praktikplats hos ett rymd- eller satellitbolag under min tredje termin på civilingenjörsprogrammet.",
   ],
   // Statistik-siffror som kan visas som HUD-readouts i hero/about.
   stats: [

@@ -148,12 +148,10 @@ export const courses = [
     url: "https://student.ladok.se/student/app/studentwebb/min-utbildning/kurs/d9439b91-f8ac-11e8-b662-a4ea16e54f61",
   },
   {
-    // OBS: hp och status saknades i underlaget du klistrade in — fyll i det
-    // som stämmer. Länken nedan är dock komplett och stämmer med Ladok.
     name: "Funktionell och imperativ programmering, del 1",
     code: "TDDE23",
-    hp: null,
-    status: "[STATUS SAKNAS]",
+    hp: 6.0,
+    status: "Avklarad",
     url: "https://student.ladok.se/student/app/studentwebb/min-utbildning/kurs/e1eb2fb7-f8ac-11e8-b662-a4ea16e54f61",
   },
 ];
