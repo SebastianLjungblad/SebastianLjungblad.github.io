@@ -12,7 +12,7 @@ export const projects = [
     company: "Laga Alternativt AB",
     tagline: "Fullstack e-handelsplattform byggd helt från grunden",
     url: "https://finnsihavet.se",
-    status: "Live i produktion",
+    status: "Under Produktion",
     image: null, // t.ex. "assets/images/projects/finns-i-havet-hero.jpg"
     description:
       "Finns i Havet är en e-handelsplattform jag har designat, utvecklat och driftsatt helt själv — från databasmodell och betalflöde till frakthantering och adminverktyg. Allt är byggt för att tåla riktig trafik och riktiga pengar, inte bara ett kursprojekt.",
