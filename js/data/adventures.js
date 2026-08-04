@@ -15,7 +15,7 @@ export const raceAdventures = [
     subtitle: "Fulldistans #1",
     location: "Kalmar, Sverige",
     date: "2025-08-16",
-    image: null,
+    image: "assets/images/adventures/IMG_0459.jpg",
     distance: { swim: "3,8 km", bike: "180 km", run: "42,2 km" },
     stats: [
       { label: "Sluttid", value: "[SLUTTID]" },
@@ -84,7 +84,7 @@ export const climbingAdventures = [
     subtitle: "2 469 möh — Norges och Nordeuropas högsta topp",
     location: "Jotunheimen, Norge",
     date: "2025-09-08",
-    image: null,
+    image: "assets/images/adventures/IMG_0458.JPG",
     facts: {
       elevation: "2 469 m ö.h.",
       range: "Jotunheimen, Norge",
