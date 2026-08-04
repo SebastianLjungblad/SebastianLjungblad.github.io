@@ -89,7 +89,7 @@ export const climbingAdventures = [
       elevation: "2 469 m ö.h.",
       range: "Jotunheimen, Norge",
       normalRoute: "Leden från Juvasshytta (1 841 m), över glaciären Styggebreen",
-      difficulty: "Ingen teknisk klättring, men glaciärkorsning i replag med certifierad guide är obligatorisk — sista biten är en brant snötäckt sluttning",
+      difficulty: "Ingen teknisk klättring, men glaciärkorsning i replag med certifierad guide är obligatorisk — sista biten är en brant sluttning",
       baseHut: "Övernattning på Raubergstulen, start från Juvasshytta",
     },
     logistics: {
@@ -103,7 +103,7 @@ export const climbingAdventures = [
         {
           step: "Toppdagen",
           detail:
-            "Start från Juvasshytta (1 841 m). Efter cirka tre timmars vandring — inklusive glaciärkorsningen över Styggebreen i sele och replag med guide — nås toppen via en brant, snötäckt sluttning de sista metrarna.",
+            "Start från Juvasshytta (1 841 m). Efter cirka tre timmars vandring — inklusive glaciärkorsningen över Styggebreen i sele och replag med guide — nås toppen via en brant sluttning de sista metrarna.",
         },
       ],
       gear: [
@@ -114,9 +114,9 @@ export const climbingAdventures = [
         "Karta — mobiltäckning saknas ofta i fjällen",
       ],
       safety:
-        "Turen kräver god fysisk form och rätt utrustning. Kolla väderläget innan avfärd och lyssna på lokala fjällfolk, och gå alltid med en certifierad glaciärguide över Styggebreen. Åldersgräns för glaciärkorsningen från Juvasshytta är sju år.",
+        "Turen kräver god fysisk form och rätt utrustning.",
     },
-    thoughts: "[Dina egna minnen och tankar från toppdagen på Galdhøpiggen.]",
+    thoughts: "Hyfsat lätt bestigning, men med en rikigt snabb guide brännde det rejält i benen!",
   },
   {
     id: "gran-paradiso",
