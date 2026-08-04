@@ -2,6 +2,32 @@ import { projects } from "../data/projects.js";
 import { mediaBlock } from "../modules/placeholder.js";
 import { getIcon } from "../modules/icons.js";
 
+// Väljer vad som ska visas i ett projektkorts media-ruta:
+// 1) liveEmbed (URL) — visar en riktig, levande vy av sidan i mobilstorlek,
+//    inramad som en telefon, laddad direkt från projektets URL.
+// 2) image — vanlig bild/skärmdump.
+// 3) platshållare, om inget av ovanstående är satt.
+function projectMediaBlock(p) {
+  if (p.liveEmbed) {
+    return `
+      <div class="project-card__live-wrap">
+        <div class="phone-frame">
+          <div class="phone-frame__notch"></div>
+          <div class="phone-frame__screen">
+            <iframe
+              src="${p.liveEmbed}"
+              title="Live-vy av ${p.name} (mobilversion)"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+        <div class="live-badge"><span class="live-badge__dot"></span>Live-vy · mobil</div>
+      </div>
+    `;
+  }
+  return mediaBlock(p.image, `Skärmdump / bild från ${p.name} (rekommenderat 1200×900px)`, p.name);
+}
+
 export function renderProjects(containerId = "projects-list") {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -24,7 +50,7 @@ export function renderProjects(containerId = "projects-list") {
       return `
         <article class="card project-card" data-reveal="${i % 2 === 0 ? "left" : "right"}">
           <div class="project-card__media">
-            ${mediaBlock(p.image, `Skärmdump / bild från ${p.name} (rekommenderat 1200×900px)`, p.name)}
+            ${projectMediaBlock(p)}
           </div>
           <div class="project-card__body">
             <div class="project-card__top">

@@ -3,6 +3,18 @@
 // Lägg till fler projekt-objekt i arrayen när du bygger nya saker.
 // image: sökväg till en bild i assets/images/projects/ — lämna null för att
 // visa en snygg platshållare istället.
+//
+// LIVE-VY ISTÄLLET FÖR BILD:
+// Sätt liveEmbed till projektets URL för att visa en riktig, levande
+// mobil-vy av sidan (i en telefonram) istället för en bild — sidan laddas
+// live i en iframe, i mobilstorlek, varje gång någon besöker din portfolio.
+//   liveEmbed: "https://dinsida.se"
+// Lämna som null för att använda image/platshållare istället.
+// Om liveEmbed är satt används den. Annars används image. Annars platshållare.
+// OBS: vissa sidor blockerar att visas i en iframe via HTTP-headers som
+// X-Frame-Options eller Content-Security-Policy (frame-ancestors). Om rutan
+// bara visas tom/vit hos en riktig besökare är det troligen orsaken — säg
+// till så byter vi tillbaka till en vanlig bild istället.
 // ============================================================================
 
 export const projects = [
@@ -14,6 +26,7 @@ export const projects = [
     url: "https://finnsihavet.se",
     status: "Under Produktion",
     image: null, // t.ex. "assets/images/projects/finns-i-havet-hero.jpg"
+    liveEmbed: "https://finnsihavet.se",
     description:
       "Finns i Havet är en e-handelsplattform jag har designat, utvecklat och driftsatt helt själv — från databasmodell och betalflöde till frakthantering och adminverktyg. Allt är byggt för att tåla riktig trafik och riktiga pengar, inte bara ett kursprojekt.",
     highlights: [
@@ -68,8 +81,7 @@ export const projects = [
     url: null,
     status: "Kommer snart",
     image: null,
-    description:
-      "-",
+    description: "-",
     highlights: [],
     stack: [],
     placeholder: true,
