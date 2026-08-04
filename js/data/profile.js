@@ -30,7 +30,7 @@ export const profile = {
   ],
   // Statistik-siffror som kan visas som HUD-readouts i hero/about.
   stats: [
-    { label: "Ironman-lopp", value: "3", unit: "" },
+    { label: "Ironman-lopp", value: "2", unit: "" },
     { label: "År på Contrado", value: "6.8", unit: "år" },
     { label: "Toppar bestigna", value: "1+", unit: "" },
     { label: "Programmeringsspråk", value: "7+", unit: "" },

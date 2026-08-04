@@ -7,7 +7,7 @@ export function renderAboutPortrait(containerId = "about-portrait") {
   if (!container) return;
   container.innerHTML = mediaBlock(
     profile.portraitImage,
-    "Porträttbild av Sebastian (rekommenderat 800×1000px, stående)",
+    "assets/images/about/sebastian.jpg",
     profile.name
   );
 }
