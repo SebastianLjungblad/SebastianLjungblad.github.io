@@ -7,7 +7,7 @@
 export const profile = {
   // Sökväg till porträttbild, t.ex. "assets/images/about/sebastian.jpg".
   // Lämna null för att visa en snygg platshållare istället.
-  portraitImage: assets/images/about/sebastian.jpg,
+  portraitImage: "assets/images/about/sebastian.jpg",
   name: "Sebastian Ljungblad",
   firstName: "Sebastian",
   age: 21,
