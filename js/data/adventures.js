@@ -78,6 +78,47 @@ export const raceAdventures = [
 
 export const climbingAdventures = [
   {
+    id: "galdhopiggen",
+    type: "climb",
+    title: "Galdhøpiggen",
+    subtitle: "2 469 möh — Norges och Nordeuropas högsta topp",
+    location: "Jotunheimen, Norge",
+    date: "2025-09-08",
+    image: null,
+    facts: {
+      elevation: "2 469 m ö.h.",
+      range: "Jotunheimen, Norge",
+      normalRoute: "Leden från Juvasshytta (1 841 m), över glaciären Styggebreen",
+      difficulty: "Ingen teknisk klättring, men glaciärkorsning i replag med certifierad guide är obligatorisk — sista biten är en brant snötäckt sluttning",
+      baseHut: "Övernattning på Raubergstulen, start från Juvasshytta",
+    },
+    logistics: {
+      intro:
+        "Galdhøpiggen är inte bara Norges högsta berg utan även högsta toppen i hela Nordeuropa, med utsikt över Jotunheimen på klara dagar. Den kortaste och mest populära leden går från Juvasshytta, men eftersom rutten korsar glaciären Styggebreen krävs sele, rep och en certifierad glaciärguide — sprickorna syns inte under snön.",
+      itinerary: [
+        {
+          step: "Uppladdning",
+          detail: "Övernattning på Raubergstulen i Bøverdalen inför turen.",
+        },
+        {
+          step: "Toppdagen",
+          detail:
+            "Start från Juvasshytta (1 841 m). Efter cirka tre timmars vandring — inklusive glaciärkorsningen över Styggebreen i sele och replag med guide — nås toppen via en brant, snötäckt sluttning de sista metrarna.",
+        },
+      ],
+      gear: [
+        "Sele och rep (guidad glaciärkorsning)",
+        "Ordentliga bergs-/vandringskängor",
+        "Varma extralager samt vind- och vattentäta ytterkläder",
+        "Mat och vätska för hela turen",
+        "Karta — mobiltäckning saknas ofta i fjällen",
+      ],
+      safety:
+        "Turen kräver god fysisk form och rätt utrustning. Kolla väderläget innan avfärd och lyssna på lokala fjällfolk, och gå alltid med en certifierad glaciärguide över Styggebreen. Åldersgräns för glaciärkorsningen från Juvasshytta är sju år.",
+    },
+    thoughts: "[Dina egna minnen och tankar från toppdagen på Galdhøpiggen.]",
+  },
+  {
     id: "gran-paradiso",
     type: "climb",
     // Kommande bestigning — inte genomförd än. Status/datum nedan visas som

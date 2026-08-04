@@ -5,25 +5,25 @@
 export const achievedGoals = [
   {
     title: "Ironman Kalmar",
-    year: "[ÅR]",
+    year: "2025",
     detail: "Fullständig Ironman-distans: 3,8 km simning, 180 km cykel, 42,2 km löpning.",
     icon: "medal",
   },
   {
-    title: "Ironman Kalmar #2",
-    year: "[ÅR]",
-    detail: "Andra fullständiga Ironman-loppet i Kalmar.",
-    icon: "medal",
-  },
-  {
     title: "Ironman 70.3 Jönköping",
-    year: "[ÅR]",
+    year: "2026",
     detail: "Halvdistans-triathlon: 1,9 km simning, 90 km cykel, 21,1 km löpning.",
     icon: "medal",
   },
   {
-    title: "Byggt och lanserat Finns i Havet",
-    year: "[ÅR]",
+    title: "Galdhøpiggen (2 469 m)",
+    year: "2025",
+    detail: "Bestigning av Norges och Nordeuropas högsta berg via Juvasshytta, över glaciären Styggebreen.",
+    icon: "mountain",
+  },
+  {
+    title: "Byggt och testat Finns i Havet",
+    year: "2026",
     detail:
       "Designat, utvecklat och driftsatt en komplett e-handelsplattform helt själv — från lagersystem till betalningslösning.",
     icon: "code",
@@ -44,9 +44,14 @@ export const futureGoals = [
     icon: "rocket",
     priority: true,
   },
-   {
-    title: "Bestiga Gran Paradiso",
-    detail: "Bestigning av Gran Paradiso i de italienska Alperna — min första 4000-metare.",
+  {
+    title: "Ironman Kalmar #2",
+    detail: "15 augusti 2026 — mitt andra fulldistanslopp i Kalmar.",
+    icon: "medal",
+  },
+  {
+    title: "Gran Paradiso (4 061 m)",
+    detail: "26–27 augusti 2026 — blir min första 4000-metare, i de italienska Alperna.",
     icon: "mountain",
   },
   {
