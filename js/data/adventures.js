@@ -5,6 +5,20 @@
 // thoughts: dina tankar under loppet — så personligt du vill.
 // route.points: används av elevationsprofil-modulen för att rita en enkel
 // höjdprofil. Byt ut mot dina riktiga GPS/höjddata när du har dem.
+//
+// VIDEO ISTÄLLET FÖR BILD (endast raceAdventures just nu):
+// Ett loppkort kan visa en video istället för en bild. Fyll i ETT av dessa:
+//   videoEmbed: en YouTube/Vimeo-embed-länk, t.ex.
+//     "https://www.youtube.com/embed/DITT_VIDEO_ID"
+//     (rekommenderas — filen ligger hos YouTube/Vimeo, inte i ditt git-repo,
+//     så repot förblir litet och videon streamas/komprimeras automatiskt.
+//     Ladda upp klippet som "olistat" på YouTube om du inte vill att det ska
+//     dyka upp i sök/din kanal, kopiera sen video-ID:t ur länken.)
+//   video: sökväg till en lokal videofil i assets/videos/adventures/, t.ex.
+//     "assets/videos/adventures/ironman-703-jonkoping.mp4"
+//     (funkar men filen laddas upp till ditt git-repo — håll den kort och
+//     komprimerad, GitHub varnar/blockerar filer över ett par hundra MB)
+// Om videoEmbed är satt används den. Annars används video. Annars image.
 // ============================================================================
 
 export const raceAdventures = [
@@ -16,6 +30,8 @@ export const raceAdventures = [
     location: "Kalmar, Sverige",
     date: "2025-08-16",
     image: "assets/images/adventures/IMG_0459.jpg",
+    video: null,
+    videoEmbed: null,
     distance: { swim: "3,8 km", bike: "180 km", run: "42,2 km" },
     stats: [
       { label: "Sluttid", value: "[SLUTTID]" },
@@ -38,6 +54,8 @@ export const raceAdventures = [
     location: "Kalmar, Sverige",
     date: "2026-08-15",
     image: null,
+    video: null,
+    videoEmbed: null,
     distance: { swim: "3,8 km", bike: "180 km", run: "42,2 km" },
     stats: [
       { label: "Sluttid", value: "[SLUTTID]" },
@@ -60,6 +78,8 @@ export const raceAdventures = [
     location: "Jönköping, Sverige",
     date: "2026-07-05",
     image: null,
+    video: "assets/videos/adventures/IMG_1751.mov",
+    videoEmbed: null,
     distance: { swim: "1,9 km", bike: "90 km", run: "21,1 km" },
     stats: [
       { label: "Sluttid", value: "[SLUTTID]" },

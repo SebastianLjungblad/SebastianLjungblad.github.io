@@ -3,6 +3,36 @@ import { mediaBlock } from "../modules/placeholder.js";
 import { buildElevationSvg } from "../modules/elevation.js";
 import { getIcon } from "../modules/icons.js";
 
+// Väljer vad som ska visas i ett loppkorts media-ruta, i prioritetsordning:
+// 1) videoEmbed (YouTube/Vimeo-länk) — rekommenderas för video, ingen filstorlek i repot
+// 2) video (lokal videofil i assets/videos/adventures/) — fungerar men gör repot större
+// 3) image — vanlig bild
+// 4) platshållare, om inget av ovanstående är satt
+function raceMediaBlock(race) {
+  if (race.videoEmbed) {
+    return `
+      <div class="race-card__video-embed">
+        <iframe
+          src="${race.videoEmbed}"
+          title="Video från ${race.title} ${race.subtitle}"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    `;
+  }
+  if (race.video) {
+    return `
+      <video class="race-card__video" controls playsinline preload="metadata">
+        <source src="${race.video}" />
+        Din webbläsare stödjer inte videouppspelning.
+      </video>
+    `;
+  }
+  return mediaBlock(race.image, `Bild från ${race.title} ${race.subtitle} (rekommenderat 900×600px)`, race.title);
+}
+
 export function renderRaces(containerId = "races-grid") {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -12,7 +42,7 @@ export function renderRaces(containerId = "races-grid") {
       (race, i) => `
       <article class="card race-card" data-reveal="scale" style="--reveal-delay:${i * 100}ms">
         <div class="race-card__media">
-          ${mediaBlock(race.image, `Bild från ${race.title} ${race.subtitle} (rekommenderat 900×600px)`, race.title)}
+          ${raceMediaBlock(race)}
         </div>
         <div class="race-card__location text-mono">${race.location} · ${race.date}</div>
         <h3 class="race-card__title">${race.title}</h3>
