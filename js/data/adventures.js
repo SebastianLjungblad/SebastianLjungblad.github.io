@@ -14,7 +14,7 @@ export const raceAdventures = [
     title: "Ironman Kalmar",
     subtitle: "Fulldistans #1",
     location: "Kalmar, Sverige",
-    date: "[DATUM]",
+    date: "2025-08-16",
     image: null,
     distance: { swim: "3,8 km", bike: "180 km", run: "42,2 km" },
     stats: [
@@ -24,8 +24,7 @@ export const raceAdventures = [
       { label: "Löpning", value: "[TID]" },
       { label: "Placering", value: "[PLACERING]" },
     ],
-    thoughts:
-      "[Skriv om vad du tänkte under loppet — hur kändes övergången mellan simning och cykel? Vad höll dig igång de sista milen på löpningen?]",
+    thoughts: "",
     route: {
       elevationGainM: "[HÖJDMETER]",
       points: [10, 12, 9, 14, 11, 8, 13, 10, 16, 12, 9, 11],
@@ -34,10 +33,10 @@ export const raceAdventures = [
   {
     id: "ironman-kalmar-2",
     type: "race",
-    title: "Ironman Kalmar",
+    title: "Ironman Kalmar #2 - uppkommande",
     subtitle: "Fulldistans #2",
     location: "Kalmar, Sverige",
-    date: "[DATUM]",
+    date: "2026-08-15",
     image: null,
     distance: { swim: "3,8 km", bike: "180 km", run: "42,2 km" },
     stats: [
@@ -47,8 +46,7 @@ export const raceAdventures = [
       { label: "Löpning", value: "[TID]" },
       { label: "Placering", value: "[PLACERING]" },
     ],
-    thoughts:
-      "[Vad var annorlunda andra gången? Vad hade du lärt dig från det första loppet som du tog med dig hit?]",
+    thoughts: "Kommande...",
     route: {
       elevationGainM: "[HÖJDMETER]",
       points: [11, 13, 10, 15, 12, 9, 14, 11, 17, 13, 10, 12],
@@ -60,7 +58,7 @@ export const raceAdventures = [
     title: "Ironman 70.3",
     subtitle: "Halvdistans",
     location: "Jönköping, Sverige",
-    date: "[DATUM]",
+    date: "2026-07-05",
     image: null,
     distance: { swim: "1,9 km", bike: "90 km", run: "21,1 km" },
     stats: [
@@ -70,8 +68,7 @@ export const raceAdventures = [
       { label: "Löpning", value: "[TID]" },
       { label: "Placering", value: "[PLACERING]" },
     ],
-    thoughts:
-      "[Dina tankar under loppet i Jönköping — hur skiljde sig känslan mot fulldistans?]",
+    thoughts: "",
     route: {
       elevationGainM: "[HÖJDMETER]",
       points: [8, 10, 7, 12, 9, 6, 11, 8, 13, 9, 7, 10],
@@ -83,10 +80,14 @@ export const climbingAdventures = [
   {
     id: "gran-paradiso",
     type: "climb",
+    // Kommande bestigning — inte genomförd än. Status/datum nedan visas som
+    // en tydlig "kommande"-tagg på kortet. Byt till "status: null" och fyll
+    // i "thoughts" med dina egna minnen när du väl har gjort turen.
+    status: "Kommande · 26–27 augusti 2026",
     title: "Gran Paradiso",
-    subtitle: "4 061 möh — min första 4000-metare",
+    subtitle: "4 061 möh — blir min första 4000-metare",
     location: "Gran Paradiso National Park, Valsavarenche, Aostadalen, Italien",
-    date: "[DATUM]",
+    date: "26–27 augusti 2026",
     image: null,
     facts: {
       elevation: "4 061 m ö.h.",
@@ -104,14 +105,14 @@ export const climbingAdventures = [
       ],
       itinerary: [
         {
-          step: "Dag 1",
+          step: "Dag 1 — 26 augusti",
           detail:
             "Uppvandring till Rifugio Chabod (2 710 m), ankomst omkring kl. 18:30 innan middag. Genomgång av nästa dags bestigning, utrustningskoll och en avslappnad kväll i stugan inför tidig start.",
         },
         {
-          step: "Dag 2 — toppdagen",
+          step: "Dag 2 — 27 augusti, toppdagen",
           detail:
-            "Avfärd från stugan kl. 04:00–05:00. Första timmen på en svagt synlig stig, därefter enkel glaciärvandring i snö upp till ca 3 800 m, följt av en blandning av lätt klippklättring och snöpartier den sista biten till toppkorset. Uppstigningen tar 4–6 timmar. Utsikten från toppen är enastående tack vare bergets centrala, höga läge. Nedstigningen sker samma väg och tar 2–3 timmar, och avslutas med en välförtjänt tallrik pasta tillbaka på stugan.",
+            "Avfärd från stugan kl. 04:00–05:00. Första timmen på en svagt synlig stig, därefter enkel glaciärvandring i snö upp till ca 3 800 m, följt av en blandning av lätt klippklättring och snöpartier den sista biten till toppkorset. Uppstigningen tar 4–6 timmar. Nedstigningen sker samma väg och tar 2–3 timmar, och avslutas förhoppningsvis med en välförtjänt tallrik pasta tillbaka på stugan.",
         },
       ],
       gear: [
@@ -136,6 +137,6 @@ export const climbingAdventures = [
         "Ingen avancerad klätterteknik krävs, men sele och stegjärn är obligatoriskt, och glaciärvandringen kräver rutin eller en guide. Anlita gärna en certifierad (UIAGM) bergsguide om du saknar egen erfarenhet av glaciärvandring och rep-teknik. God fysisk kondition är ett måste — räkna med 8–10 timmars gång under toppdagen — och väder/förhållanden ska alltid avgöra om toppdagen genomförs.",
     },
     thoughts:
-      "[Dina egna tankar och minnen från bestigningen — starten i mörkret, glaciären i gryningen, känslan på toppen.]",
+      "Kommande — jag ger mig av mot toppen 26–27 augusti 2026. De här raderna fylls i med mina egna tankar, minnen och bilder direkt efter bestigningen.",
   },
 ];

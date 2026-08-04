@@ -11,10 +11,10 @@ export const experience = [
     description:
       "Arbetar som redovisningskonsult med ansvar för löpande bokföring, avstämningar och kundkontakt för ett flertal bolag inom olika branscher — vid sidan av heltidsstudierna på LiU.",
     clients: [
-      "Svea Husbilar",
+      "Svenska Husbilsgruppen AB",
       "Österåkers Golfklubb",
       "Ingarö Golfklubb",
-      "[FLER KUNDER]",
+      "Wendros AB",
     ],
   },
 ];

@@ -22,12 +22,6 @@ export const achievedGoals = [
     icon: "medal",
   },
   {
-    title: "Gran Paradiso (4 061 m)",
-    year: "[ÅR]",
-    detail: "Bestigning av Gran Paradiso i de italienska Alperna — min första 4000-metare.",
-    icon: "mountain",
-  },
-  {
     title: "Byggt och lanserat Finns i Havet",
     year: "[ÅR]",
     detail:
@@ -49,6 +43,11 @@ export const futureGoals = [
       "Kombinera mjukvarukompetensen med passionen för rymden under sista terminen på civilingenjörsprogrammet.",
     icon: "rocket",
     priority: true,
+  },
+   {
+    title: "Bestiga Gran Paradiso",
+    detail: "Bestigning av Gran Paradiso i de italienska Alperna — min första 4000-metare.",
+    icon: "mountain",
   },
   {
     title: "Bestiga Matterhorn",

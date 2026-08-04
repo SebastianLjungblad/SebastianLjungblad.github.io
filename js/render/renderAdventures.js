@@ -80,7 +80,10 @@ export function renderClimb(containerId = "climb-container") {
           ${mediaBlock(climb.image, `Bild från ${climb.title}-bestigningen (rekommenderat 1000×1250px, stående)`, climb.title)}
         </div>
         <div class="climb-card__body" data-reveal="right">
-          <span class="icon-badge icon-badge--amber">${getIcon("mountain")}</span>
+          <div style="display:flex;align-items:center;gap:var(--sp-3);flex-wrap:wrap;">
+            <span class="icon-badge icon-badge--amber">${getIcon("mountain")}</span>
+            ${climb.status ? `<span class="tag tag--status tag--pending">${climb.status}</span>` : ""}
+          </div>
           <h3 class="climb-card__title">${climb.title}</h3>
           <div class="climb-card__subtitle">${climb.subtitle} · ${climb.location}</div>
 

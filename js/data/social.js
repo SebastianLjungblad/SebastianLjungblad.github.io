@@ -7,7 +7,7 @@
 export const contact = {
   // Denna e-post är hämtad från ditt konto — byt gärna till en du vill
   // exponera publikt på en portfolio-sida.
-  email: "sebastian.ljungblad@icloud.com",
+  email: "sebbe.ljungblad@gmail.com",
   cvUrl: null, // T.ex. "assets/cv/sebastian-ljungblad-cv.pdf" — lägg din CV-PDF i assets/cv/
 };
 
@@ -16,19 +16,19 @@ export const socialLinks = [
     id: "tiktok",
     label: "TikTok",
     // Byt ut mot din riktiga handle, t.ex. "https://www.tiktok.com/@dittnamn"
-    url: "[TIKTOK-LÄNK]",
+    url: "https://www.tiktok.com/@seb_l2?is_from_webapp=1&sender_device=pc",
     icon: "tiktok",
   },
   {
     id: "github",
     label: "GitHub",
-    url: "[GITHUB-LÄNK]",
+    url: "https://github.com/SebastianLjungblad",
     icon: "github",
   },
   {
     id: "linkedin",
     label: "LinkedIn",
-    url: "[LINKEDIN-LÄNK]",
+    url: "https://www.linkedin.com/in/sebastian-ljungblad-63b703314/",
     icon: "linkedin",
   },
   {

@@ -69,7 +69,7 @@ export const projects = [
     status: "Kommer snart",
     image: null,
     description:
-      "Den här platsen är reserverad för nästa projekt. Kolla in källkoden och lägg till ett nytt objekt i js/data/projects.js när du har något nytt att visa upp.",
+      "-",
     highlights: [],
     stack: [],
     placeholder: true,
